@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alitas Dival | El Verdadero Sabor</title>
+
+    <!-- Favicon (Icono de la pestaña del navegador) -->
+    <link rel="icon" href="./assets/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="./assets/AlitasDivalLogo.png">
+    <!-- ========================================== -->
+
+    <!-- Google Fonts: Montserrat y Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Botón Flotante WhatsApp (Esquina Inferior Izquierda) -->
+    <a href="https://wa.me/525513352909?text=Hola,%20me%20gustaría%20hacer%20un%20pedido" class="whatsapp-float"
+        target="_blank" aria-label="Pedir por WhatsApp">
+        <span class="whatsapp-tooltip">¿SE TE ANTOJÓ? ¡PIDE AHORA MISMO!</span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navegación Flotante Moderna -->
+    <header id="navbar" class="navbar floating-nav">
+        <div class="nav-container">
+            <a href="#inicio" class="logo-link">
+                <div class="logo-wrapper">
+                    <img src="/ALITASDIVAL/assets/AlitasDivalLogo.png" alt="Logo Alitas Dival" class="logo">
+                </div>
+                <span class="brand-name">ALITAS DIVAL</span>
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <div class="hamburger"></div>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#menu-oficial" class="nav-link">Menú</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#eventos" class="nav-link">Eventos</a></li>
+                    <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+                    <li><a href="#ubicacion" class="btn-nav glow-effect"><i class="fas fa-motorcycle"></i> Pedir
+                            Ahora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (Fondo Oscuro + NUEVO FUEGO) -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg" style="background-image: url('/ALITASDIVAL/assets/AlitasPNG.png');"></div>
+        <div class="hero-overlay-dark"></div>
+
+        <!-- Nuevo Fuego (Esquina Superior Izquierda) -->
+        <div class="new-fire fire-tl">
+            <div class="f-layer f-outer"></div>
+            <div class="f-layer f-mid"></div>
+            <div class="f-layer f-inner"></div>
+            <div class="f-sparks">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <!-- Nuevo Fuego (Esquina Inferior Derecha) -->
+        <div class="new-fire fire-br">
+            <div class="f-layer f-outer"></div>
+            <div class="f-layer f-mid"></div>
+            <div class="f-layer f-inner"></div>
+            <div class="f-sparks">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <!-- Alitas Emergentes Lentas y Flotantes -->
+        <div class="hero-wings">
+            <img src="assets/Alitas-png.png" alt="Alitas Dival" class="wings-img" onerror="this.style.display='none'">
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+
+                <!-- Etiqueta Negra con letras Naranjas -->
+                <div class="experience-badge reveal fade-left">
+                    <i class="fas fa-fire"></i> <span>Más de 10 años de experiencia</span>
+                </div>
+
+                <h1 class="reveal fade-left delay-1">EL VERDADERO SABOR<br><span class="text-primary-color">DE LAS
+                        ALITAS</span></h1>
+                <p class="subtitle reveal fade-left delay-2">Crujientes, jugosas y bañadas en nuestras exclusivas salsas
+                    secretas.</p>
+
+                <div class="rating reveal fade-left delay-3">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>4.9/5 (Reseñas verificadas)</span>
+                </div>
+
+                <div class="hero-buttons reveal fade-left delay-4">
+                    <a href="#ubicacion" class="btn-secondary">
+                        <i class="fas fa-map-marker-alt"></i> <span>Visítanos</span>
+                    </a>
+                    <a href="#menu-oficial" class="btn-primary glow-effect">
+                        <span>Ver Menú</span> <i class="fas fa-book-open"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Menú Oficial (Fondo Blanco) -->
+    <section id="menu-oficial" class="section white-bg light-section">
+        <div class="container">
+            <div class="section-title reveal fade-up">
+                <span class="pre-title">Lo que preparamos para ti</span>
+                <h2>NUESTRO MENÚ</h2>
+                <div class="separator"></div>
+                <p>Elige tu antojo favorito. Preparado al momento con ingredientes frescos.</p>
+            </div>
+
+            <!-- Botón Desplegable de la Imagen Completa -->
+            <div class="menu-dropdown-section reveal fade-up delay-1">
+                <button id="toggle-menu-btn" class="btn-primary btn-large glow-effect">
+                    Ver Menú Original <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="menu-dropdown-content" class="menu-dropdown-content">
+                    <img src="/ALITASDIVAL/assets/AlitasDivalLogo.png" alt="Menú Oficial Alitas Dival"
+                        class="real-menu-img">
+                    <div class="menu-action mt-20">
+                        <a href="/ALITASDIVAL/assets/AlitasDivalLogo.png" download="Menu-Alitas-Dival"
+                            class="btn-outline">
+                            <i class="fas fa-file-download"></i> Descargar Imagen
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoría: Hamburguesas -->
+            <h3 class="category-title reveal fade-up mt-60">Hamburguesas</h3>
+            <div class="menu-list-grid">
+                <div class="menu-item-card reveal fade-up">
+                    <div class="item-img-side">
+                        <img src="./assets/HamburguesaSencilla.png" alt="Hamburguesa Sencilla"
+                            onerror="this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Hamburguesa Sencilla</h4>
+                        <div class="price-row"><span class="price">$60</span><span class="addon-badge">+ $25 con
+                                papas</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up delay-1">
+                    <div class="item-img-side">
+                        <img src="./assets/HamburguesaDobleQueso.png" alt="Hamburguesa Doble Queso"
+                            onerror="this.src='https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Hamburguesa Doble Queso</h4>
+                        <div class="price-row"><span class="price">$65</span><span class="addon-badge">+ $25 con
+                                papas</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up delay-2">
+                    <div class="item-img-side">
+                        <img src="./assets/HamburguesaHawaiana.png" alt="Hamburguesa Hawaiana"
+                            onerror="this.src='https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Hamburguesa Hawaiana</h4>
+                        <div class="price-row"><span class="price">$80</span><span class="addon-badge">+ $25 con
+                                papas</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up">
+                    <div class="item-img-side">
+                        <img src="./assets/Salchiburger.png" alt="Salchiburger"
+                            onerror="this.src='https://images.unsplash.com/photo-1594212848237-3d6ce4e101bd?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Salchiburger</h4>
+                        <div class="price-row"><span class="price">$80</span><span class="addon-badge">+ $25 con
+                                papas</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up delay-1">
+                    <div class="item-img-side">
+                        <img src="./assets/Polloburger.png" alt="Hamburguesa de Pollo"
+                            onerror="this.src='https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Hamburguesa de Pollo</h4>
+                        <div class="price-row"><span class="price">$80</span><span class="addon-badge">+ $25 con
+                                papas</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoría: Antojos y Snacks -->
+            <h3 class="category-title reveal fade-up mt-60">Especialidades y Snacks</h3>
+            <div class="menu-list-grid">
+                <div class="menu-item-card reveal fade-up">
+                    <div class="item-img-side">
+                        <img src="./assets/AlitasConPapas.png" alt="Alitas con Papas"
+                            onerror="this.src='https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Alitas con Papas</h4>
+                        <div class="price-row"><span class="price">$90</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up delay-1">
+                    <div class="item-img-side">
+                        <img src="./assets/Alambre.jpg" alt="Alambre"
+                            onerror="this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Alambre</h4>
+                        <div class="price-row"><span class="price">$115</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up delay-2">
+                    <div class="item-img-side">
+                        <img src="./assets/OrdenHotDogs.png" alt="Orden Hot-Dogs (3)"
+                            onerror="this.src='https://images.unsplash.com/photo-1619740455993-9e612b1af08a?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Orden Hot-Dogs (3)</h4>
+                        <div class="price-row"><span class="price">$60</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up">
+                    <div class="item-img-side">
+                        <img src="./assets/Salchipulpos.png" alt="Salchipulpos"
+                            onerror="this.src='https://images.unsplash.com/photo-1625938146369-adc83368bda7?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Salchipulpos</h4>
+                        <div class="price-row"><span class="price">$60</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up delay-1">
+                    <div class="item-img-side">
+                        <img src="./assets/PapasFrancesa.jpg" alt="Papas a la Francesa"
+                            onerror="this.src='https://images.unsplash.com/photo-1573080496499-9740f9f38f17?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Papas a la Francesa</h4>
+                        <div class="price-row"><span class="price">$55</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up delay-2">
+                    <div class="item-img-side">
+                        <img src="./assets/Quesocarne.jpg" alt="Quesocarne"
+                            onerror="this.src='https://images.unsplash.com/photo-1615719413546-198b25453f85?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Quesocarne</h4>
+                        <div class="price-row"><span class="price">$50</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up">
+                    <div class="item-img-side">
+                        <img src="./assets/Sincronizada.png" alt="Sincronizada"
+                            onerror="this.src='https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Sincronizada</h4>
+                        <div class="price-row"><span class="price">$40</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up delay-1">
+                    <div class="item-img-side">
+                        <img src="./assets/Nuggets.png" alt="Nuggets"
+                            onerror="this.src='https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Nuggets</h4>
+                        <div class="price-row"><span class="price">$40</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up delay-2">
+                    <div class="item-img-side">
+                        <img src="./assets/PlatanosFritos.png" alt="Plátanos Fritos"
+                            onerror="this.src='https://images.unsplash.com/photo-1604467715878-83e57e8bc129?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Plátanos Fritos</h4>
+                        <div class="price-row"><span class="price">$40</span></div>
+                    </div>
+                </div>
+                <div class="menu-item-card reveal fade-up">
+                    <div class="item-img-side">
+                        <img src="./assets/HotDog.jpg" alt="Hot-Dog"
+                            onerror="this.src='https://images.unsplash.com/photo-1619740455993-9e612b1af08a?auto=format&fit=crop&w=300&q=80'">
+                        <div class="img-gradient-blend"></div>
+                    </div>
+                    <div class="item-info-side">
+                        <h4>Hot-Dog</h4>
+                        <div class="price-row"><span class="price">$25</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Especialidades con Imágenes Completas -->
+    <section id="galeria" class="section black-bg">
+        <div class="container">
+            <div class="section-title reveal fade-up">
+                <span class="pre-title">Los Favoritos</span>
+                <h2>GALERÍA DE PLATILLOS</h2>
+                <div class="separator"></div>
+            </div>
+
+            <!-- GALERÍA CORREGIDA EN UN SOLO DIV Y 6 ELEMENTOS -->
+            <div class="gallery-grid">
+                <div class="gallery-item reveal fade-up">
+                    <img src="./assets/AlasSpecial.jpg" alt="ALITAS" class="lightbox-trigger"
+                        onerror="this.src='https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                    <div class="gallery-overlay pointer-none">
+                        <div class="overlay-content"><i class="fas fa-heart"></i>
+                            <h4>ALITAS</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal fade-up delay-1">
+                    <img src="./assets/HamburguesasSpecial.jpg" alt="HAMBURGUESAS" class="lightbox-trigger"
+                        onerror="this.src='https://images.unsplash.com/photo-1627662056157-5eeb5bd1989f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                    <div class="gallery-overlay pointer-none">
+                        <div class="overlay-content"><i class="fas fa-heart"></i>
+                            <h4>HAMBURGUESAS</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal fade-up delay-2">
+                    <img src="./assets/AlambreSpecial.jpg" alt="ALAMBRE" class="lightbox-trigger"
+                        onerror="this.src='https://images.unsplash.com/photo-1573080496499-9740f9f38f17?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                    <div class="gallery-overlay pointer-none">
+                        <div class="overlay-content"><i class="fas fa-heart"></i>
+                            <h4>ALAMBRE</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal fade-up">
+                    <img src="./assets/Paquete3.jpg" alt="3 SABORES" class="lightbox-trigger"
+                        onerror="this.src='https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                    <div class="gallery-overlay pointer-none">
+                        <div class="overlay-content"><i class="fas fa-heart"></i>
+                            <h4>TRIPLE SABOR</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal fade-up delay-1">
+                    <img src="./assets/Especialidades.jpg" alt="ESPECIALIDADES" class="lightbox-trigger"
+                        onerror="this.src='https://images.unsplash.com/photo-1573080496499-9740f9f38f17?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                    <div class="gallery-overlay pointer-none">
+                        <div class="overlay-content"><i class="fas fa-heart"></i>
+                            <h4>PAPAS ESPECIALES</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal fade-up delay-2">
+                    <img src="./assets/PaLlenar.jpg" alt="LLENAR" class="lightbox-trigger"
+                        onerror="this.src='https://images.unsplash.com/photo-1573080496499-9740f9f38f17?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                    <div class="gallery-overlay pointer-none">
+                        <div class="overlay-content"><i class="fas fa-heart"></i>
+                            <h4>PA' LLENAR</h4>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Fin del grid -->
+        </div>
+    </section>
+
+    <!-- Sección Eventos -->
+    <section id="eventos" class="section event-bg">
+        <div class="event-overlay"></div>
+        <div class="container relative-z">
+            <div class="event-card reveal fade-up">
+                <div class="event-content">
+                    <span class="pre-title">Servicio Especial</span>
+                    <h2>¿TIENES UN EVENTO?</h2>
+                    <h3>Nosotros ponemos el sabor.</h3>
+                    <p>Ofrecemos servicio de catering y pedidos por volumen para tus fiestas, reuniones o eventos
+                        corporativos. Disfruta de la máxima calidad sin preocuparte por cocinar.</p>
+
+                    <ul class="event-features">
+                        <li><i class="fas fa-check-circle"></i> <span>Paquetes 100% personalizados</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Entregas puntuales y seguras</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Calidad e higiene garantizada</span></li>
+                    </ul>
+
+                    <a href="https://wa.me/525513352909?text=Hola,%20me%20interesa%20cotizar%20para%20un%20evento"
+                        target="_blank" class="btn-primary glow-effect">
+                        <i class="fab fa-whatsapp"></i> Cotizar Mi Evento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Ubicación y Maps -->
+    <section id="ubicacion" class="section black-bg">
+        <div class="container">
+            <div class="section-title reveal fade-up">
+                <span class="pre-title">Visítanos o Pide a Casa</span>
+                <h2>ENCUÉNTRANOS</h2>
+                <div class="separator"></div>
+            </div>
+
+            <div class="location-wrapper">
+                <div class="location-info-grid reveal fade-left">
+                    <div class="info-card">
+                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-text">
+                            <h4>Nuestra Ubicación</h4>
+                            <p>Atotonilco 1610, San Felipe de Jesús<br>Gustavo A. Madero, 07510<br>Ciudad de México,
+                                CDMX</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-box"><i class="fas fa-motorcycle"></i></div>
+                        <div class="info-text">
+                            <h4>Pedidos (Delivery & Pickup)</h4>
+                            <p class="phone-number">55 7421 1364</p>
+                            <p class="phone-number">55 1335 2909</p>
+                            <p class="phone-number">56 5233 1762</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-box"><i class="fas fa-clock"></i></div>
+                        <div class="info-text">
+                            <h4>Horario de Atención</h4>
+                            <p>Viernes, Sabados y Domingos</p>
+                            <p class="highlight-text">De 18:30 PM a 00:30 AM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-map reveal fade-right">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps?q=ALITAS+DIVAL,+Atotonilco+1610,+San+Felipe+de+Jesús,+Gustavo+A.+Madero,+07510+Ciudad+de+México,+CDMX&output=embed"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/Picsart_26-06-16_22-58-26-060.jpg" alt="Logo Footer"
+                            onerror="this.src='/ALITASDIVAL/assets/AlitasDivalLogo.png'">
+                        <h2>Alitas Dival</h2>
+                    </div>
+                    <p>El mejor ambiente, el mejor sabor. Especialistas en alitas, hamburguesas y snacks para satisfacer
+                        tu antojo en la CDMX.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#menu-oficial"><i class="fas fa-chevron-right"></i> Menú</a></li>
+                        <li><a href="#galeria"><i class="fas fa-chevron-right"></i> Galería</a></li>
+                        <li><a href="#eventos"><i class="fas fa-chevron-right"></i> Eventos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social-section">
+                    <h3>Síguenos</h3>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/525513352909" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alitas Dival. Todos los derechos reservados.</p>
+                <p class="dev-credit">Diseñado y Desarrollado por <a href="https://detech-gray.vercel.app/"
+                        target="_blank" rel="noopener noreferrer"><strong>DETECH</strong></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox (Visor de Imágenes para Galería) -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
