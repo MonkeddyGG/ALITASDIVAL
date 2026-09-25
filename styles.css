@@ -11,8 +11,9 @@
     --text-muted: #a0a4ab;
     --text-dark: #121212;
 
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
+    /* Nuevas tipografías aplicadas */
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Poppins', sans-serif;
 
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -58,8 +59,10 @@ h2,
 h3,
 h4 {
     font-family: var(--font-heading);
-    font-weight: 800;
+    font-weight: 700;
+    /* Letras gruesas para impacto */
     line-height: 1.2;
+    text-transform: uppercase;
 }
 
 a {
@@ -109,8 +112,8 @@ a {
     display: block;
     color: var(--primary);
     font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 0.9rem;
+    font-weight: 500;
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 8px;
@@ -123,7 +126,6 @@ a {
 
 .section-title h2 {
     font-size: clamp(2rem, 4vw, 2.8rem);
-    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
@@ -154,8 +156,8 @@ a {
     gap: 10px;
     padding: 14px 32px;
     font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
     border-radius: 8px;
     transition: var(--transition);
     text-transform: uppercase;
@@ -200,7 +202,7 @@ a {
 }
 
 .btn-large {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 18px 40px;
     width: 100%;
     max-width: 400px;
@@ -256,8 +258,8 @@ a {
     border-radius: 20px;
     border-bottom-left-radius: 4px;
     font-family: var(--font-heading);
-    font-size: 0.85rem;
-    font-weight: 800;
+    font-size: 0.95rem;
+    font-weight: 500;
     white-space: nowrap;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     border: 2px solid #25d366;
@@ -313,7 +315,7 @@ a {
     width: 95%;
     max-width: 1200px;
     z-index: 999;
-    padding: 18px 30px;
+    padding: 15px 30px;
     background: rgba(15, 16, 20, 0.75);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -327,7 +329,7 @@ a {
     background: rgba(15, 16, 20, 0.98);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     border-color: rgba(255, 179, 0, 0.3);
-    padding: 12px 25px;
+    padding: 10px 25px;
 }
 
 .nav-container {
@@ -342,24 +344,35 @@ a {
     gap: 15px;
 }
 
+/* ====== LOGO MEJORADO ====== */
 .logo-wrapper {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid var(--primary);
+    width: 85px;
+    /* Más grande */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Eliminados los bordes, border-radius y overflow para que respire libre */
 }
 
 .logo {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+    /* Sombra para resaltar */
+    transition: transform 0.3s ease;
 }
+
+.logo-link:hover .logo {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+/* =========================== */
 
 .brand-name {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
-    font-weight: 900;
+    font-size: 1.6rem;
+    font-weight: 700;
     letter-spacing: 1px;
     color: var(--text-main);
 }
@@ -372,8 +385,9 @@ a {
 }
 
 .nav-link {
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
@@ -404,11 +418,11 @@ a {
 .btn-nav {
     background-color: var(--primary);
     color: #121212;
-    padding: 12px 24px;
+    padding: 10px 24px;
     border-radius: 30px;
     font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 0.95rem;
+    font-weight: 500;
+    font-size: 1.1rem;
     text-transform: uppercase;
     transition: var(--transition);
 }
@@ -514,7 +528,6 @@ a {
     pointer-events: none;
 }
 
-/* Reubicado completamente a las esquinas */
 .fire-tl {
     top: 40px;
     left: -20px;
@@ -536,7 +549,6 @@ a {
     transform-origin: center bottom;
 }
 
-/* Capas con Animación Vertical (Sin Inclinación Skew) */
 .f-outer {
     width: 100px;
     height: 100px;
@@ -565,7 +577,6 @@ a {
     animation: burn-inner 0.8s ease-in-out infinite alternate;
 }
 
-/* Animaciones Verticales para simular llama real */
 @keyframes burn-outer {
     0% {
         transform: translateY(2px) rotate(45deg) scale(0.95);
@@ -596,7 +607,6 @@ a {
     }
 }
 
-/* Chispas volando directo hacia arriba */
 .f-sparks span {
     position: absolute;
     width: 6px;
@@ -701,7 +711,6 @@ a {
     display: flex;
     justify-content: flex-end;
     padding-top: 50px;
-    /* Separación del top en PC */
 }
 
 .hero-content {
@@ -709,7 +718,6 @@ a {
     max-width: 650px;
     padding-top: 60px;
     margin-right: 5%;
-    /* Margen mejorado en PC */
 }
 
 .experience-badge {
@@ -720,8 +728,9 @@ a {
     color: #121212;
     padding: 8px 20px;
     border-radius: 30px;
+    font-family: var(--font-body);
     font-size: 0.95rem;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 25px;
@@ -729,7 +738,7 @@ a {
 }
 
 .hero-content h1 {
-    font-size: clamp(2.8rem, 5vw + 1rem, 5rem);
+    font-size: clamp(2.8rem, 5vw + 1rem, 5.5rem);
     margin-bottom: 20px;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
@@ -857,6 +866,8 @@ a {
 }
 
 .item-info-side h4 {
+    font-family: var(--font-body);
+    font-weight: 700;
     font-size: 1.15rem;
     color: var(--text-dark);
     margin-bottom: 8px;
@@ -871,8 +882,8 @@ a {
 
 .price-row .price {
     font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.4rem;
     color: var(--primary);
 }
 
@@ -1004,6 +1015,8 @@ a {
 }
 
 .event-content h3 {
+    font-family: var(--font-body);
+    font-weight: 700;
     font-size: 1.4rem;
     color: var(--primary);
     margin-bottom: 20px;
@@ -1051,7 +1064,7 @@ a {
 }
 
 .info-card {
-    background: var(--bg-card);
+    background: rgba(255, 255, 255, 0.02);
     padding: 25px;
     border-radius: 12px;
     display: flex;
@@ -1084,6 +1097,8 @@ a {
 }
 
 .info-text h4 {
+    font-family: var(--font-body);
+    font-weight: 600;
     font-size: 1.1rem;
     margin-bottom: 8px;
     color: var(--text-main);
@@ -1091,14 +1106,16 @@ a {
 
 .info-text p {
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .info-text .phone-number {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 500;
     color: #fff;
     margin-bottom: 3px;
+    letter-spacing: 1px;
 }
 
 .info-text .highlight-text {
@@ -1149,14 +1166,15 @@ a {
 }
 
 .footer-logo img {
-    width: 50px;
-    border-radius: 12px;
+    width: 60px;
+    /* Un poco más grande en el footer también */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .footer-brand p {
     color: var(--text-muted);
     max-width: 400px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .footer-links h3,
@@ -1180,7 +1198,7 @@ a {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .footer-links a:hover {
@@ -1200,7 +1218,7 @@ a {
 .footer-social a {
     width: 45px;
     height: 45px;
-    background: var(--bg-card);
+    background: rgba(255, 255, 255, 0.05);
     color: var(--text-main);
     display: flex;
     align-items: center;
@@ -1227,7 +1245,7 @@ a {
     gap: 15px;
     color: var(--text-muted);
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .dev-credit strong {
@@ -1339,7 +1357,7 @@ a {
 }
 
 /* ==================================================
-   RESPONSIVIDAD (MEJORADA PARA TEXTOS Y BOTONES)
+   RESPONSIVIDAD
    ================================================== */
 @media (max-width: 1024px) {
 
@@ -1363,7 +1381,6 @@ a {
         padding: 60px 0;
     }
 
-    /* Adaptación WhatsApp */
     .whatsapp-float {
         bottom: 25px;
         left: 20px;
@@ -1381,7 +1398,6 @@ a {
         text-align: left;
     }
 
-    /* Adaptación Navbar */
     .floating-nav {
         top: 0;
         width: 100%;
@@ -1392,16 +1408,25 @@ a {
         background: rgba(15, 16, 20, 0.95);
     }
 
+    /* Redimensionar logo en celular para no cubrir todo */
+    .logo-wrapper {
+        width: 65px;
+    }
+
+    .brand-name {
+        font-size: 1.4rem;
+    }
+
     .menu-toggle {
         display: block;
     }
 
     .nav-menu {
         position: fixed;
-        top: 60px;
+        top: 65px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 65px);
         background-color: rgba(15, 16, 20, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -1421,7 +1446,7 @@ a {
     }
 
     .nav-link {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         color: #fff;
     }
 
@@ -1432,7 +1457,6 @@ a {
         padding: 15px;
     }
 
-    /* --- AJUSTE CLAVE HERO MÓVIL --- */
     .hero-container {
         justify-content: center;
         padding-top: 0;
@@ -1441,7 +1465,6 @@ a {
     .hero-content {
         text-align: center;
         z-index: 5;
-        /* IMPORTANTE: Margen superior para que el Navbar no lo tape */
         padding-top: 120px;
         margin-right: 0;
         padding-bottom: 40px;
@@ -1449,7 +1472,6 @@ a {
 
     .experience-badge {
         font-size: 0.85rem;
-        /* Ajuste visual del botón en móvil */
         padding: 6px 15px;
         white-space: normal;
         text-align: center;
@@ -1476,7 +1498,7 @@ a {
 
     .btn-large {
         width: 100%;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .event-card {
@@ -1494,7 +1516,6 @@ a {
         font-size: 40px;
     }
 
-    /* Fuego ajustado para celular en las esquinas */
     .fire-tl {
         top: 90px;
         left: -30px;
