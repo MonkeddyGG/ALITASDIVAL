@@ -129,4 +129,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    /* =========================================
+       6. Carrusel tipo Cartas (Cada 4 segundos)
+       ========================================= */
+    const heroSlides = document.querySelectorAll('.carousel-slide');
+    let currentHeroSlide = 0;
+
+    if (heroSlides.length > 0) {
+        setInterval(() => {
+            // Remueve clase activa de la imagen actual
+            heroSlides[currentHeroSlide].classList.remove('active');
+
+            // Avanza a la siguiente imagen, volviendo a cero si llega al límite
+            currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+
+            // Aplica la clase a la nueva imagen
+            heroSlides[currentHeroSlide].classList.add('active');
+        }, 4000); // 4000 ms = 4 segundos (ideal para interfaces web rápidas)
+    }
+
 });

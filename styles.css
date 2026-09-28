@@ -11,7 +11,6 @@
     --text-muted: #a0a4ab;
     --text-dark: #121212;
 
-    /* Nuevas tipografías aplicadas */
     --font-heading: 'Oswald', sans-serif;
     --font-body: 'Poppins', sans-serif;
 
@@ -60,7 +59,6 @@ h3,
 h4 {
     font-family: var(--font-heading);
     font-weight: 700;
-    /* Letras gruesas para impacto */
     line-height: 1.2;
     text-transform: uppercase;
 }
@@ -144,9 +142,7 @@ a {
     border-radius: 2px;
 }
 
-/* ==================================================
-   BOTONES
-   ================================================== */
+/* BOTONES */
 .btn-primary,
 .btn-secondary,
 .btn-outline {
@@ -220,9 +216,7 @@ a {
     margin-top: 60px;
 }
 
-/* ==================================================
-   WHATSAPP FLOTANTE Y TOOLTIP
-   ================================================== */
+/* WHATSAPP FLOTANTE Y TOOLTIP */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -305,17 +299,17 @@ a {
 }
 
 /* ==================================================
-   HEADER NAVBAR
+   HEADER NAVBAR (Ultra Compacto / Delgado)
    ================================================== */
 .floating-nav {
     position: fixed;
-    top: 25px;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
     width: 95%;
     max-width: 1200px;
     z-index: 999;
-    padding: 15px 30px;
+    padding: 5px 20px;
     background: rgba(15, 16, 20, 0.75);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -325,11 +319,11 @@ a {
 }
 
 .floating-nav.scrolled {
-    top: 15px;
+    top: 10px;
     background: rgba(15, 16, 20, 0.98);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     border-color: rgba(255, 179, 0, 0.3);
-    padding: 10px 25px;
+    padding: 3px 20px;
 }
 
 .nav-container {
@@ -341,17 +335,15 @@ a {
 .logo-link {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
-/* ====== LOGO MEJORADO ====== */
 .logo-wrapper {
-    width: 85px;
-    /* Más grande */
+    width: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Eliminados los bordes, border-radius y overflow para que respire libre */
+    transition: var(--transition);
 }
 
 .logo {
@@ -359,7 +351,6 @@ a {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
-    /* Sombra para resaltar */
     transition: transform 0.3s ease;
 }
 
@@ -367,26 +358,16 @@ a {
     transform: scale(1.08) rotate(-3deg);
 }
 
-/* =========================== */
-
-.brand-name {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--text-main);
-}
-
 .nav-menu ul {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 18px;
 }
 
 .nav-link {
     font-family: var(--font-heading);
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -418,11 +399,11 @@ a {
 .btn-nav {
     background-color: var(--primary);
     color: #121212;
-    padding: 10px 24px;
+    padding: 6px 18px;
     border-radius: 30px;
     font-family: var(--font-heading);
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
     text-transform: uppercase;
     transition: var(--transition);
 }
@@ -484,7 +465,7 @@ a {
 }
 
 /* ==================================================
-   HERO SECTION (FUEGO MEJORADO Y MÁRGENES)
+   HERO SECTION
    ================================================== */
 .hero {
     position: relative;
@@ -502,11 +483,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     z-index: 1;
-    opacity: 0.6;
 }
 
 .hero-overlay-dark {
@@ -519,7 +496,7 @@ a {
     z-index: 2;
 }
 
-/* --- FUEGO VERTICAL EN LAS ESQUINAS --- */
+/* FUEGO VERTICAL EN LAS ESQUINAS */
 .new-fire {
     position: absolute;
     width: 100px;
@@ -660,50 +637,184 @@ a {
     }
 }
 
-/* Alitas Emergentes */
-.hero-wings {
+/* ==================================================
+   FONDO LLUVIA DE HAMBURGUESAS (DOODLES) - MEJORADOS
+   ================================================== */
+.falling-doodles {
     position: absolute;
-    bottom: 5%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.doodle {
+    position: absolute;
+    top: -150px;
+    opacity: 1;
+    animation: rain linear infinite;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.8));
+}
+
+.doodle:nth-child(1) {
+    left: 5%;
+    width: 80px;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.doodle:nth-child(2) {
+    left: 15%;
+    width: 110px;
+    animation-duration: 13s;
+    animation-delay: -2s;
+}
+
+.doodle:nth-child(3) {
+    left: 25%;
+    width: 90px;
+    animation-duration: 11s;
+    animation-delay: -5s;
+}
+
+.doodle:nth-child(4) {
+    left: 35%;
+    width: 120px;
+    animation-duration: 15s;
+    animation-delay: -1s;
+}
+
+.doodle:nth-child(5) {
+    left: 45%;
+    width: 95px;
+    animation-duration: 12s;
+    animation-delay: -7s;
+}
+
+.doodle:nth-child(6) {
+    left: 55%;
+    width: 130px;
+    animation-duration: 16s;
+    animation-delay: -3s;
+}
+
+.doodle:nth-child(7) {
+    left: 65%;
+    width: 85px;
+    animation-duration: 14s;
+    animation-delay: -6s;
+}
+
+.doodle:nth-child(8) {
+    left: 75%;
+    width: 115px;
+    animation-duration: 11s;
+    animation-delay: -8s;
+}
+
+.doodle:nth-child(9) {
+    left: 85%;
+    width: 100px;
+    animation-duration: 17s;
+    animation-delay: -4s;
+}
+
+.doodle:nth-child(10) {
+    left: 95%;
+    width: 105px;
+    animation-duration: 13s;
+    animation-delay: -9s;
+}
+
+.doodle:nth-child(11) {
+    left: 10%;
+    width: 125px;
+    animation-duration: 15s;
+    animation-delay: -10s;
+}
+
+.doodle:nth-child(12) {
+    left: 30%;
+    width: 85px;
+    animation-duration: 12s;
+    animation-delay: -11s;
+}
+
+.doodle:nth-child(13) {
     left: 50%;
-    transform: translateX(-50%);
-    width: 45%;
-    max-width: 600px;
+    width: 110px;
+    animation-duration: 14s;
+    animation-delay: -12s;
+}
+
+.doodle:nth-child(14) {
+    left: 70%;
+    width: 95px;
+    animation-duration: 11s;
+    animation-delay: -13s;
+}
+
+.doodle:nth-child(15) {
+    left: 80%;
+    width: 135px;
+    animation-duration: 16s;
+    animation-delay: -14s;
+}
+
+.doodle:nth-child(16) {
+    left: 90%;
+    width: 90px;
+    animation-duration: 10s;
+    animation-delay: -15s;
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(-150px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* ==================================================
+   CARRUSEL TIPO "CARTAS" (NO DESLIZABLE)
+   ================================================== */
+.hero-carousel {
+    position: absolute;
     z-index: 3;
     pointer-events: none;
+    width: 100%;
+    height: 350px;
+    bottom: 30px;
+    left: 0;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.wings-img {
-    width: 100%;
-    height: auto;
-    display: block;
+.carousel-slide {
+    position: absolute;
+    width: 85%;
+    max-width: 450px;
+    object-fit: contain;
     opacity: 0;
-    transform: translateY(350px) rotate(-5deg) scale(0.9);
-    animation: riseUpWings 3.5s cubic-bezier(0.2, 1, 0.3, 1) forwards, floatWings 6s ease-in-out infinite 3.5s;
-    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.9));
+    transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
+    transform: scale(0.95);
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
 }
 
-@keyframes riseUpWings {
-    to {
-        opacity: 0.95;
-        transform: translateY(0) rotate(0deg) scale(1);
-    }
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+    transform: scale(1) translateY(-10px);
 }
 
-@keyframes floatWings {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-15px) rotate(2deg);
-    }
-}
-
-/* --- AJUSTE DE MÁRGENES HERO CONTENT --- */
+/* HERO CONTENEDOR DE TEXTOS */
 .hero-container {
     position: relative;
     z-index: 4;
@@ -771,9 +882,7 @@ a {
     gap: 20px;
 }
 
-/* ==================================================
-   RESTO DE SECCIONES... 
-   ================================================== */
+/* MENÚ DESPLEGABLE Y CATEGORÍAS */
 .menu-dropdown-section {
     text-align: center;
     max-width: 800px;
@@ -1167,7 +1276,6 @@ a {
 
 .footer-logo img {
     width: 60px;
-    /* Un poco más grande en el footer también */
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
@@ -1246,6 +1354,18 @@ a {
     color: var(--text-muted);
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+.dev-credit a {
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.dev-credit a:hover strong {
+    color: #fff;
+    text-shadow: 0 0 12px var(--primary);
+    transform: scale(1.05);
 }
 
 .dev-credit strong {
@@ -1357,7 +1477,82 @@ a {
 }
 
 /* ==================================================
-   RESPONSIVIDAD
+   MEJORAS PROFESIONALES PARA PC (Desktop)
+   ================================================== */
+@media (min-width: 1025px) {
+
+    .logo-wrapper {
+        width: 75px;
+        margin-left: 10px;
+    }
+
+    /* CARRUSEL DE CARTAS (CENTRADO Y GRANDE EN PC) */
+    .hero-carousel {
+        bottom: auto;
+        top: 20%;
+        left: 25%;
+        transform: translateX(-50%);
+        width: 700px;
+        height: 500px;
+    }
+
+    .carousel-slide {
+        max-width: 600px;
+    }
+
+    .hero-container {
+        position: relative;
+        z-index: 4;
+    }
+
+    .hero-content h1 {
+        font-size: 6.5rem !important;
+        line-height: 1.05;
+        margin-bottom: 25px;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.6rem !important;
+        margin-bottom: 40px;
+    }
+
+    .experience-badge {
+        font-size: 1.1rem;
+        padding: 10px 25px;
+    }
+
+    .menu-list-grid {
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    }
+
+    .menu-item-card {
+        height: 160px;
+    }
+
+    .item-img-side {
+        width: 160px;
+    }
+
+    .item-info-side {
+        padding: 20px 25px 20px 15px;
+    }
+
+    .item-info-side h4 {
+        font-size: 1.4rem;
+    }
+
+    .price-row .price {
+        font-size: 1.6rem;
+    }
+
+    .addon-badge {
+        font-size: 0.85rem;
+        padding: 4px 10px;
+    }
+}
+
+/* ==================================================
+   RESPONSIVIDAD CELULAR Y TABLET
    ================================================== */
 @media (max-width: 1024px) {
 
@@ -1365,10 +1560,6 @@ a {
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 40px;
-    }
-
-    .hero-wings {
-        width: 50%;
     }
 
     .gallery-grid {
@@ -1398,35 +1589,45 @@ a {
         text-align: left;
     }
 
+    /* HEADER MÓVIL Y LOGO CENTRADO */
     .floating-nav {
         top: 0;
         width: 100%;
         border-radius: 0;
-        padding: 15px 25px;
+        padding: 5px 15px;
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         background: rgba(15, 16, 20, 0.95);
     }
 
-    /* Redimensionar logo en celular para no cubrir todo */
-    .logo-wrapper {
-        width: 65px;
+    .nav-container {
+        justify-content: center;
+        /* ESTO CENTRA EL LOGO EN CELULAR */
+        position: relative;
+        /* Permite posicionar la hamburguesa a la derecha */
     }
 
-    .brand-name {
-        font-size: 1.4rem;
+    .logo-wrapper {
+        width: 48px;
     }
 
     .menu-toggle {
         display: block;
+        position: absolute;
+        /* Despegamos la hamburguesa del flujo central */
+        right: 0;
+        /* La pegamos a la derecha */
+        top: 50%;
+        /* Centramos verticalmente */
+        transform: translateY(-50%);
     }
 
     .nav-menu {
         position: fixed;
-        top: 65px;
+        top: 55px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 65px);
+        height: calc(100vh - 55px);
         background-color: rgba(15, 16, 20, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -1457,6 +1658,13 @@ a {
         padding: 15px;
     }
 
+    /* HERO SECTION MÓVIL AGRANDADO */
+    .hero {
+        min-height: 900px;
+        height: auto;
+        padding-bottom: 60px;
+    }
+
     .hero-container {
         justify-content: center;
         padding-top: 0;
@@ -1465,9 +1673,9 @@ a {
     .hero-content {
         text-align: center;
         z-index: 5;
-        padding-top: 120px;
+        padding-top: 80px;
         margin-right: 0;
-        padding-bottom: 40px;
+        padding-bottom: 180px;
     }
 
     .experience-badge {
@@ -1487,13 +1695,15 @@ a {
         width: 100%;
     }
 
-    .hero-wings {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 75%;
-        bottom: 2%;
-        opacity: 0.35 !important;
-        z-index: 3;
+    /* CARRUSEL DE CARTAS (CELULAR) */
+    .hero-carousel {
+        left: 50px;
+        width: 80%;
+        bottom: -20px;
+    }
+
+    .carousel-slide {
+        width: 85%;
     }
 
     .btn-large {
@@ -1517,7 +1727,7 @@ a {
     }
 
     .fire-tl {
-        top: 90px;
+        top: 80px;
         left: -30px;
         transform: scale(0.9);
     }
@@ -1531,16 +1741,4 @@ a {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
-}
-
-.dev-credit a {
-    text-decoration: none;
-    display: inline-block;
-    transition: var(--transition);
-}
-
-.dev-credit a:hover strong {
-    color: #fff;
-    text-shadow: 0 0 12px var(--primary);
-    transform: scale(1.05);
 }

@@ -9,7 +9,6 @@
     <!-- Favicon -->
     <link rel="icon" href="./assets/favicon-32x32.png" type="image/png">
     <link rel="apple-touch-icon" href="./assets/favicon-32x32.png">
-    <!-- ========================================== -->
 
     <!-- Google Fonts: Oswald (Encabezados) y Poppins (Textos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +38,6 @@
                 <div class="logo-wrapper">
                     <img src="./assets/AlitasDivalLogo.png" alt="Logo Alitas Dival" class="logo">
                 </div>
-                <span class="brand-name">ALITAS DIVAL</span>
             </a>
 
             <div class="menu-toggle" id="mobile-menu">
@@ -62,10 +60,30 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <div class="hero-bg" style="background-image: url('./assets/AlitasPNG.png');"></div>
+        <div class="hero-bg"></div>
         <div class="hero-overlay-dark"></div>
 
-        <!-- Fuego Mejorado (Esquina Superior Izquierda) -->
+        <!-- Lluvia de Doodles Vivos, Grandes y sin opacidad -->
+        <div class="falling-doodles">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+            <img src="./assets/doodle-hamburguesa.png" class="doodle" alt="doodle">
+        </div>
+
+        <!-- Fuego Mejorado -->
         <div class="new-fire fire-tl">
             <div class="f-layer f-outer"></div>
             <div class="f-layer f-mid"></div>
@@ -75,7 +93,6 @@
             </div>
         </div>
 
-        <!-- Fuego Mejorado (Esquina Inferior Derecha) -->
         <div class="new-fire fire-br">
             <div class="f-layer f-outer"></div>
             <div class="f-layer f-mid"></div>
@@ -85,15 +102,17 @@
             </div>
         </div>
 
-        <!-- Alitas Emergentes Lentas y Flotantes -->
-        <div class="hero-wings">
-            <img src="assets/Alitas-png.png" alt="Alitas Dival" class="wings-img" onerror="this.style.display='none'">
+        <!-- NUEVO Carrusel de Cartas Centrado -->
+        <div class="hero-carousel">
+            <!-- Asignamos la clase "active" a la primera para que empiece viéndose -->
+            <img src="./assets/carrusel-alitas.png" class="carousel-slide active" alt="Alitas Dival">
+            <img src="./assets/carrusel-hamburguesa.png" class="carousel-slide" alt="Hamburguesa Dival">
+
         </div>
 
         <div class="container hero-container">
             <div class="hero-content">
 
-                <!-- Etiqueta Negra con letras Naranjas -->
                 <div class="experience-badge reveal fade-left">
                     <i class="fas fa-fire"></i> <span>Más de 10 años de experiencia</span>
                 </div>
@@ -133,7 +152,6 @@
                 <p>Elige tu antojo favorito. Preparado al momento con ingredientes frescos.</p>
             </div>
 
-            <!-- Botón Desplegable de la Imagen Completa -->
             <div class="menu-dropdown-section reveal fade-up delay-1">
                 <button id="toggle-menu-btn" class="btn-primary btn-large glow-effect">
                     Ver Menú Original <i class="fas fa-chevron-down"></i>
